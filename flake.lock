@@ -1,0 +1,330 @@
+{
+  "nodes": {
+    "SDL2-win32": {
+      "inputs": {
+        "SDL2_src": "SDL2_src",
+        "nixpkgs": [
+          "supertux-milestone1",
+          "nixpkgs"
+        ],
+        "tinycmmc": [
+          "supertux-milestone1",
+          "tinycmmc"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753127534,
+        "narHash": "sha256-73UFk9wGZb0CQ2EpFaXRczHzUUlOzK/Ov2KP3ewk4qw=",
+        "owner": "grumnix",
+        "repo": "SDL2-win32",
+        "rev": "278a40a7bff4c0b0bf4f5ad1c528308df4a1b0f9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "grumnix",
+        "repo": "SDL2-win32",
+        "type": "github"
+      }
+    },
+    "SDL2_image-win32": {
+      "inputs": {
+        "SDL2_image_src": "SDL2_image_src",
+        "nixpkgs": [
+          "supertux-milestone1",
+          "nixpkgs"
+        ],
+        "tinycmmc": [
+          "supertux-milestone1",
+          "tinycmmc"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753127641,
+        "narHash": "sha256-tyxJ/BVa8cTM/RnrNvA74+VGKqXZjDnpSFeyTEmagDs=",
+        "owner": "grumnix",
+        "repo": "SDL2_image-win32",
+        "rev": "4cc470369cc84058739367683c8f75de31c9f132",
+        "type": "github"
+      },
+      "original": {
+        "owner": "grumnix",
+        "repo": "SDL2_image-win32",
+        "type": "github"
+      }
+    },
+    "SDL2_image_src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1741038808,
+        "narHash": "sha256-RdfL5vmppsxWqvhz6ZL41GtnSc63hrEMan3uG22iEyE=",
+        "type": "tarball",
+        "url": "https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.8.8-mingw.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.8.8-mingw.tar.gz"
+      }
+    },
+    "SDL2_mixer-win32-x64": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1738958792,
+        "narHash": "sha256-4HZQQiepTwGXeS/QwW+0BayuxH5+08cCstEFXSoTjkE=",
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.1/SDL2_mixer-2.8.1-win32-x64.zip"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.1/SDL2_mixer-2.8.1-win32-x64.zip"
+      }
+    },
+    "SDL2_mixer-win32-x86": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1738958772,
+        "narHash": "sha256-D6W/pjPr9nED34xotJuRz+3pOzRhpwfC0xmk4vQNvpM=",
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.1/SDL2_mixer-2.8.1-win32-x86.zip"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.1/SDL2_mixer-2.8.1-win32-x86.zip"
+      }
+    },
+    "SDL2_src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1748906407,
+        "narHash": "sha256-aakdhaTL0dgt2BQEtv3w6pp1mwOrmNzEorh3lLxJgyo=",
+        "type": "tarball",
+        "url": "https://libsdl.org/release/SDL2-devel-2.32.8-mingw.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://libsdl.org/release/SDL2-devel-2.32.8-mingw.tar.gz"
+      }
+    },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
+      "inputs": {
+        "systems": "systems_2"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "libxmp-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1686860750,
+        "narHash": "sha256-LBiBYENn2c4CTV9iQt2L3QLu6tIV3KFpVkxxCUz7WAQ=",
+        "type": "tarball",
+        "url": "https://github.com/libxmp/libxmp/releases/download/libxmp-4.6.0/libxmp-4.6.0.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/libxmp/libxmp/releases/download/libxmp-4.6.0/libxmp-4.6.0.tar.gz"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1786247143,
+        "narHash": "sha256-8S3Kcxs7D4UtxJxSJZz0m14CGhuW0MxfrIwJxeGWGnQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "279b4a8275f032c566576b3f181fa0f27197f588",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1785599192,
+        "narHash": "sha256-dg4RTtDxnXY13UkJNdhmgTUTl0n/IJBlCigfO7nutZw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "6d65bfc1bcef2ef39a239d38e577e92a89fb0f07",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-26.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "supertux-milestone1": "supertux-milestone1"
+      }
+    },
+    "sdl2-image-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1704144931,
+        "narHash": "sha256-zEE5Uk77xD0dYAJIPuhmidH51huxtmr+OmlrCcXoYRg=",
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.2/SDL2_image-2.8.2.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.2/SDL2_image-2.8.2.tar.gz"
+      }
+    },
+    "sdl2-mixer-mingw-devel": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1738962281,
+        "narHash": "sha256-N4AS1iYQoMeJ1Hq5VlHqVNxpCIP7oSS2shgHOvXP3iA=",
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.1/SDL2_mixer-devel-2.8.1-mingw.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.1/SDL2_mixer-devel-2.8.1-mingw.tar.gz"
+      }
+    },
+    "sdl2-mixer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1705857723,
+        "narHash": "sha256-ItN0LFoWw4nrs/B/ZJcEhZiIV6DklsvBpZyI8xXY8QU=",
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.0/SDL2_mixer-2.8.0.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL_mixer/releases/download/release-2.8.0/SDL2_mixer-2.8.0.tar.gz"
+      }
+    },
+    "sdl2-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1714580206,
+        "narHash": "sha256-49TNuKx5ec+rEK49rKjqrKStQzuhk8zdu8mRe/amUBk=",
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL/releases/download/release-2.30.3/SDL2-2.30.3.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://github.com/libsdl-org/SDL/releases/download/release-2.30.3/SDL2-2.30.3.tar.gz"
+      }
+    },
+    "supertux-milestone1": {
+      "inputs": {
+        "SDL2-win32": "SDL2-win32",
+        "SDL2_image-win32": "SDL2_image-win32",
+        "SDL2_mixer-win32-x64": "SDL2_mixer-win32-x64",
+        "SDL2_mixer-win32-x86": "SDL2_mixer-win32-x86",
+        "flake-utils": "flake-utils",
+        "libxmp-src": "libxmp-src",
+        "nixpkgs": "nixpkgs_2",
+        "sdl2-image-src": "sdl2-image-src",
+        "sdl2-mixer-mingw-devel": "sdl2-mixer-mingw-devel",
+        "sdl2-mixer-src": "sdl2-mixer-src",
+        "sdl2-src": "sdl2-src",
+        "tinycmmc": "tinycmmc"
+      },
+      "locked": {
+        "lastModified": 1786125764,
+        "narHash": "sha256-kOqVGLJfAZbRKsf6cdRcE40fbQJ6bwc2QWnI1Qua75E=",
+        "owner": "SuperTux-Origins",
+        "repo": "supertux-milestone1",
+        "rev": "3d48f7ff977533bc4a47a559f5b4841c134af6a3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SuperTux-Origins",
+        "repo": "supertux-milestone1",
+        "type": "github"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_2": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "tinycmmc": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": [
+          "supertux-milestone1",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1783197069,
+        "narHash": "sha256-NI2pxYz9w+4yZrwOVr8g0a4B8iFAmrWCsrjlHZEfskE=",
+        "owner": "grumbel",
+        "repo": "tinycmmc",
+        "rev": "d7549879e3232909e124f25d33a33ce7dff153b6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "grumbel",
+        "repo": "tinycmmc",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
