@@ -11,9 +11,8 @@
       pkgs = nixpkgs.legacyPackages.${system};
       supertux-milestone1-wasm = supertux-milestone1.packages.${system}.supertux-milestone1-wasm;
       supertux-milestone1-android = supertux-milestone1.packages.${system}.supertux-milestone1-android;
-    in
-    {
-      packages.${system}.default = pkgs.runCommand "site" { } ''
+
+      site = pkgs.runCommand "site" { } ''
         mkdir -p $out
         cp -v ${./index.html} $out/index.html
         cp -rv ${supertux-milestone1-wasm} $out/milestone1/
@@ -25,5 +24,24 @@
         substituteInPlace $out/index.html \
           --subst-var-by SUPERTUX_MILESTONE1_APK "$SUPERTUX_MILESTONE1_APK" \
       '';
+    in
+    {
+      packages.${system}.default = site;
+
+      # Local preview: build the site, serve over HTTP, open a browser.
+      # Mirrors `nix run .#supertux-milestone1-wasm` from the game flake.
+      #   nix run .
+      #   nix run .#serve
+      #   SUPERTUX_ORIGINS_PORT=9000 nix run .#serve
+      apps.${system}.default = self.apps.${system}.serve;
+      apps.${system}.serve = {
+        type = "app";
+        program = toString (pkgs.writeShellScript "serve-supertux-origins-site" ''
+          set -euo pipefail
+          export PKG="${site}"
+          export SUPERTUX_ORIGINS_PORT="''${SUPERTUX_ORIGINS_PORT:-8765}"
+          exec ${./scripts/serve.sh}
+        '');
+      };
     };
 }
