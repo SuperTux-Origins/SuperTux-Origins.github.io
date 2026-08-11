@@ -24,6 +24,16 @@
         substituteInPlace $out/index.html \
           --subst-var-by SUPERTUX_MILESTONE1_APK "$SUPERTUX_MILESTONE1_APK" \
       '';
+
+      serveApp = {
+        type = "app";
+        program = toString (pkgs.writeShellScript "serve-supertux-origins-site" ''
+          set -euo pipefail
+          export PKG="${site}"
+          export SUPERTUX_ORIGINS_PORT="''${SUPERTUX_ORIGINS_PORT:-8765}"
+          exec ${./scripts/serve.sh}
+        '');
+      };
     in
     {
       packages.${system}.default = site;
@@ -33,15 +43,9 @@
       #   nix run .
       #   nix run .#serve
       #   SUPERTUX_ORIGINS_PORT=9000 nix run .#serve
-      apps.${system}.default = self.apps.${system}.serve;
-      apps.${system}.serve = {
-        type = "app";
-        program = toString (pkgs.writeShellScript "serve-supertux-origins-site" ''
-          set -euo pipefail
-          export PKG="${site}"
-          export SUPERTUX_ORIGINS_PORT="''${SUPERTUX_ORIGINS_PORT:-8765}"
-          exec ${./scripts/serve.sh}
-        '');
+      apps.${system} = {
+        default = serveApp;
+        serve = serveApp;
       };
     };
 }
