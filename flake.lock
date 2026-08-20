@@ -1318,11 +1318,11 @@
         "xdgcpp": "xdgcpp"
       },
       "locked": {
-        "lastModified": 1787226447,
-        "narHash": "sha256-wtpWlzI5fYQVgu7AQJFsgfjskXrRebGlqlGfvy2KmdY=",
+        "lastModified": 1787230269,
+        "narHash": "sha256-D1dTJx8nmZmXp9xDK38KEV8Lsyw7oZMhBYajYxoKD90=",
         "owner": "SuperTux-Origins",
         "repo": "supertux",
-        "rev": "202c70cf192f23c839edc4fa2741c659a9222857",
+        "rev": "0c651e94173bb2c51b1f92fd8d520185db622a1a",
         "type": "github"
       },
       "original": {
