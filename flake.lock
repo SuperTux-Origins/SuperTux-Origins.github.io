@@ -807,11 +807,11 @@
         "tinycmmc": "tinycmmc"
       },
       "locked": {
-        "lastModified": 1787314017,
-        "narHash": "sha256-4JSNKUpkmGrRxYQvmm0m7z4oiOLjTvrJMbZ5RM/WS0c=",
+        "lastModified": 1787334479,
+        "narHash": "sha256-tA+Obkhva7vew3NibdC4UUxjq1in+qP6AFfEmbYIs6Y=",
         "owner": "SuperTux-Origins",
         "repo": "supertux-milestone1",
-        "rev": "a38ab64eb144f97a6155fa38f9ce84099ce8402b",
+        "rev": "151ac258301edb36bb5c7b9f4e2f5ab7821e5bd9",
         "type": "github"
       },
       "original": {

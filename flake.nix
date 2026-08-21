@@ -16,6 +16,7 @@
       supertux-milestone1-android = supertux-milestone1.packages.${system}.supertux-milestone1-android;
       supertux-milestone1-win32-x86 = supertux-milestone1.packages.${system}.supertux-milestone1-win32-x86-zip;
       supertux-milestone1-win32-x64 = supertux-milestone1.packages.${system}.supertux-milestone1-win32-x64-zip;
+      supertux-milestone1-r36s = supertux-milestone1.packages.${system}.supertux-milestone1-r36s-portmaster-zip;
 
       supertux-origins-wasm = supertux-origins.packages.${system}.supertux-origins-wasm;
       supertux-origins-android = supertux-origins.packages.${system}.supertux-origins-android;
@@ -41,6 +42,10 @@
         echo "Milestone1 Win32 (64-bit): $SUPERTUX_MILESTONE1_WIN32_X64"
         cp -v "${supertux-milestone1-win32-x64}/$SUPERTUX_MILESTONE1_WIN32_X64" $out/milestone1/
 
+        SUPERTUX_MILESTONE1_R36S=$(basename ${supertux-milestone1-r36s}/*.zip)
+        echo "Milestone1 R36S: $SUPERTUX_MILESTONE1_R36S"
+        cp -v "${supertux-milestone1-r36s}/$SUPERTUX_MILESTONE1_R36S" $out/milestone1/
+
         # Origins — same pattern under origins/
         cp -rv ${supertux-origins-wasm} $out/origins/
         chmod -R u+w $out/origins
@@ -64,6 +69,7 @@
           --subst-var-by SUPERTUX_MILESTONE1_APK "$SUPERTUX_MILESTONE1_APK" \
           --subst-var-by SUPERTUX_MILESTONE1_WIN32_X86 "$SUPERTUX_MILESTONE1_WIN32_X86" \
           --subst-var-by SUPERTUX_MILESTONE1_WIN32_X64 "$SUPERTUX_MILESTONE1_WIN32_X64" \
+          --subst-var-by SUPERTUX_MILESTONE1_R36S "$SUPERTUX_MILESTONE1_R36S" \
           --subst-var-by SUPERTUX_ORIGINS_APK "$SUPERTUX_ORIGINS_APK" \
           --subst-var-by SUPERTUX_ORIGINS_WIN32 "$SUPERTUX_ORIGINS_WIN32"
       '';
