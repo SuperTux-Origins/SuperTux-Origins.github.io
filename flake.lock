@@ -209,6 +209,38 @@
         "url": "https://github.com/libsdl-org/SDL_ttf/releases/download/release-2.22.0/SDL2_ttf-devel-2.22.0-mingw.tar.gz"
       }
     },
+    "arkosSysrootSrc": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787339014,
+        "narHash": "sha256-vdc15JmtewgOwZPk8PfWZzM+t19P6YlRfe2Jp02+ycg=",
+        "owner": "grumnix",
+        "repo": "arkos-sysroot",
+        "rev": "3d2a98fe2fdff123fe4c6c7c7e9f6c0150c99a1c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "grumnix",
+        "repo": "arkos-sysroot",
+        "type": "github"
+      }
+    },
+    "arkosSysrootSrc_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787339014,
+        "narHash": "sha256-vdc15JmtewgOwZPk8PfWZzM+t19P6YlRfe2Jp02+ycg=",
+        "owner": "grumnix",
+        "repo": "arkos-sysroot",
+        "rev": "3d2a98fe2fdff123fe4c6c7c7e9f6c0150c99a1c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "grumnix",
+        "repo": "arkos-sysroot",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -797,6 +829,7 @@
         "SDL2_image-win32": "SDL2_image-win32",
         "SDL2_mixer-win32-x64": "SDL2_mixer-win32-x64",
         "SDL2_mixer-win32-x86": "SDL2_mixer-win32-x86",
+        "arkosSysrootSrc": "arkosSysrootSrc",
         "flake-utils": "flake-utils_3",
         "libxmp-src": "libxmp-src",
         "nixpkgs": "nixpkgs_2",
@@ -807,11 +840,11 @@
         "tinycmmc": "tinycmmc"
       },
       "locked": {
-        "lastModified": 1787334479,
-        "narHash": "sha256-tA+Obkhva7vew3NibdC4UUxjq1in+qP6AFfEmbYIs6Y=",
+        "lastModified": 1787339676,
+        "narHash": "sha256-zD2aeRyqIPQ0JwEsfiPIlNEU70TEqFcIX7X5ERcTbgc=",
         "owner": "SuperTux-Origins",
         "repo": "supertux-milestone1",
-        "rev": "151ac258301edb36bb5c7b9f4e2f5ab7821e5bd9",
+        "rev": "287f50bab26043e16b159d9ace01e663b575ce20",
         "type": "github"
       },
       "original": {
@@ -825,6 +858,7 @@
         "SDL2-win32": "SDL2-win32_2",
         "SDL2_image-win32": "SDL2_image-win32_2",
         "SDL2_ttf-win32": "SDL2_ttf-win32",
+        "arkosSysrootSrc": "arkosSysrootSrc_2",
         "flake-utils": "flake-utils_7",
         "freetype-src": "freetype-src",
         "libmodplug-win32": "libmodplug-win32",
@@ -842,11 +876,11 @@
         "xdgcpp": "xdgcpp"
       },
       "locked": {
-        "lastModified": 1787305921,
-        "narHash": "sha256-uyJfV2tHUEtbEaoCOK+aDMxTJ1k4rT94YvV+XW2evNA=",
+        "lastModified": 1787341228,
+        "narHash": "sha256-cTOCSW7HVvV3jNP2aA8wQQAj5h3C8qqeABleMmjupy0=",
         "owner": "SuperTux-Origins",
         "repo": "supertux",
-        "rev": "d6920c95b2bc6b2e08be21621088c10ba0188f66",
+        "rev": "81b831e998ba0dbe1b2880e846725d458e90d333",
         "type": "github"
       },
       "original": {

@@ -21,6 +21,7 @@
       supertux-origins-wasm = supertux-origins.packages.${system}.supertux-origins-wasm;
       supertux-origins-android = supertux-origins.packages.${system}.supertux-origins-android;
       supertux-origins-win32 = supertux-origins.packages.${system}.supertux-origins-win32-zip;
+      supertux-origins-r36s = supertux-origins.packages.${system}.supertux-origins-r36s-portmaster-zip;
 
       site = pkgs.runCommand "site" { } ''
         mkdir -p $out
@@ -64,6 +65,10 @@
         echo "Origins Win32: $SUPERTUX_ORIGINS_WIN32"
         cp -v "${supertux-origins-win32}/$SUPERTUX_ORIGINS_WIN32" $out/origins/
 
+        SUPERTUX_ORIGINS_R36S=$(basename ${supertux-origins-r36s}/*.zip)
+        echo "Origins R36s: $SUPERTUX_ORIGINS_R36S"
+        cp -v "${supertux-origins-r36s}/$SUPERTUX_ORIGINS_R36S" $out/origins/
+
         # --subst-var-by SUPERTUX_MILESTONE1_WIN32 "$SUPERTUX_MILESTONE1_WIN32"
         substituteInPlace $out/index.html \
           --subst-var-by SUPERTUX_MILESTONE1_APK "$SUPERTUX_MILESTONE1_APK" \
@@ -71,7 +76,8 @@
           --subst-var-by SUPERTUX_MILESTONE1_WIN32_X64 "$SUPERTUX_MILESTONE1_WIN32_X64" \
           --subst-var-by SUPERTUX_MILESTONE1_R36S "$SUPERTUX_MILESTONE1_R36S" \
           --subst-var-by SUPERTUX_ORIGINS_APK "$SUPERTUX_ORIGINS_APK" \
-          --subst-var-by SUPERTUX_ORIGINS_WIN32 "$SUPERTUX_ORIGINS_WIN32"
+          --subst-var-by SUPERTUX_ORIGINS_WIN32 "$SUPERTUX_ORIGINS_WIN32" \
+          --subst-var-by SUPERTUX_ORIGINS_R36S "$SUPERTUX_ORIGINS_R36S"
       '';
 
       serveApp = {
