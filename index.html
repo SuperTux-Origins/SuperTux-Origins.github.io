@@ -1,26 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperTux Origins</title>
-  </head>
-  <body>
-    <h1>SuperTux Origins</h1>
-    <ul>
-      <li><a href="origins/supertux-origins.html">SuperTux Origins Web (WASM)</a></li>
-      <li><a href="origins/@SUPERTUX_ORIGINS_APK@">SuperTux Origins Android APK</a></li>
-      <li><a href="origins/@SUPERTUX_ORIGINS_WIN32@">SuperTux Origins Windows</a></li>
-      <li><a href="origins/@SUPERTUX_ORIGINS_R36S@">SuperTux Origins R36S</a></li>
-    </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperTux Origins</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    <h1>SuperTux Milestone 1</h1>
-    <ul>
-      <li><a href="milestone1/supertux-milestone1.html">SuperTux Milestone 1 Web</a></li>
-      <li><a href="milestone1/@SUPERTUX_MILESTONE1_APK@">SuperTux Milestone 1 Android APK</a></li>
-      <li><a href="milestone1/@SUPERTUX_MILESTONE1_WIN32_X86@">SuperTux Milestone 1 Windows (32-bit)</a></li>
-      <li><a href="milestone1/@SUPERTUX_MILESTONE1_WIN32_X64@">SuperTux Milestone 1 Windows (64-bit)</a></li>
-      <li><a href="milestone1/@SUPERTUX_MILESTONE1_R36S@">SuperTux Milestone 1 R36S</a></li>
-    </ul>
-  </body>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Helvetica Neue", Helvetica, Verdana, system-ui, sans-serif;
+      background-color: rgb(62, 102, 125);
+      background-image: url("images/background.jpg");
+      background-repeat: repeat;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    #page {
+      width: 780px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 0 64px rgba(0, 0, 0, 0.85);
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      background: linear-gradient(180deg, #e8f4fc 0%, #fff 100%);
+      border-bottom: 4px solid #aec6d9;
+    }
+
+    .logo {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .lead {
+      margin: 0.75rem 1.5rem 1rem;
+      color: #444;
+      font-size: 1.05rem;
+    }
+
+    #pagebody {
+      padding: 1.25rem 1.75rem 2rem;
+    }
+
+    section {
+      margin-bottom: 1.75rem;
+    }
+
+    h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.35rem;
+      color: #1a5a8a;
+      border-bottom: 1px solid #d0e0ee;
+      padding-bottom: 0.25rem;
+    }
+
+    section > p {
+      margin: 0.5rem 0 0.75rem;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin: 0.25rem 0 0;
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin: 0.35rem 0;
+    }
+
+    a {
+      color: #2d78b4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #1a5a8a;
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: rgb(25, 70, 100);
+      color: #d3d3d3;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      line-height: 1.4;
+    }
+
+    footer a {
+      color: #7eb8e0;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="page">
+    <header>
+      <img class="logo" src="images/title.png" alt="SuperTux Origins">
+    </header>
+
+    <div id="pagebody">
+      <section>
+        <h2>SuperTux Origins</h2>
+        <p>
+          The modern version of SuperTux Origins with Web (WASM),
+          Android, Windows, and R36S builds.
+        </p>
+        <ul>
+          <li><a href="origins/supertux-origins.html">Play in browser (WASM)</a></li>
+          <li><a href="origins/@SUPERTUX_ORIGINS_APK@">Android APK</a></li>
+          <li><a href="origins/@SUPERTUX_ORIGINS_WIN32@">Windows</a></li>
+          <li><a href="origins/@SUPERTUX_ORIGINS_R36S@">R36S (PortMaster)</a></li>
+          <li><a href="https://github.com/SuperTux-Origins/supertux">Source code</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>SuperTux Milestone 1</h2>
+        <p>
+          The original Milestone 1 era of SuperTux (around 0.1.x),
+          ported to SDL2, preserved and packaged for modern platforms.
+        </p>
+        <ul>
+          <li><a href="milestone1/supertux-milestone1.html">Play in browser (WASM)</a></li>
+          <li><a href="milestone1/@SUPERTUX_MILESTONE1_APK@">Android APK</a></li>
+          <li><a href="milestone1/@SUPERTUX_MILESTONE1_WIN32_X86@">Windows (32-bit)</a></li>
+          <li><a href="milestone1/@SUPERTUX_MILESTONE1_WIN32_X64@">Windows (64-bit)</a></li>
+          <li><a href="milestone1/@SUPERTUX_MILESTONE1_R36S@">R36S (PortMaster)</a></li>
+          <li><a href="https://github.com/SuperTux-Origins/supertux-milestone1">Source code</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</body>
 </html>

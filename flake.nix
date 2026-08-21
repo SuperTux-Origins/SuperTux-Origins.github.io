@@ -26,6 +26,7 @@
       site = pkgs.runCommand "site" { } ''
         mkdir -p $out
         cp -v ${./index.html} $out/index.html
+        cp -rv ${./images} $out/images
 
         # Milestone 1
         cp -rv ${supertux-milestone1-wasm} $out/milestone1/
