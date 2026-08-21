@@ -14,15 +14,12 @@
 
       supertux-milestone1-wasm = supertux-milestone1.packages.${system}.supertux-milestone1-wasm;
       supertux-milestone1-android = supertux-milestone1.packages.${system}.supertux-milestone1-android;
-      # supertux-milestone1-win32 = supertux-milestone1.packages.${system}.supertux-milestone1-win32-zip;
+      supertux-milestone1-win32-x86 = supertux-milestone1.packages.${system}.supertux-milestone1-win32-x86-zip;
+      supertux-milestone1-win32-x64 = supertux-milestone1.packages.${system}.supertux-milestone1-win32-x64-zip;
 
       supertux-origins-wasm = supertux-origins.packages.${system}.supertux-origins-wasm;
       supertux-origins-android = supertux-origins.packages.${system}.supertux-origins-android;
       supertux-origins-win32 = supertux-origins.packages.${system}.supertux-origins-win32-zip;
-
-        # SUPERTUX_MILESTONE1_WIN32=$(basename ${supertux-milestone1-win32}/*.zip)
-        # echo "Milestone1 Win32: $SUPERTUX_MILESTONE1_WIN32"
-        # cp -v "${supertux-milestone1-win32}/$SUPERTUX_MILESTONE1_WIN32" $out/milestone1/
 
       site = pkgs.runCommand "site" { } ''
         mkdir -p $out
@@ -35,6 +32,14 @@
         SUPERTUX_MILESTONE1_APK=$(basename ${supertux-milestone1-android}/*.apk)
         echo "Milestone1 APK: $SUPERTUX_MILESTONE1_APK"
         cp -v "${supertux-milestone1-android}/$SUPERTUX_MILESTONE1_APK" $out/milestone1/
+
+        SUPERTUX_MILESTONE1_WIN32_X86=$(basename ${supertux-milestone1-win32-x86}/*.zip)
+        echo "Milestone1 Win32 (32-bit): $SUPERTUX_MILESTONE1_WIN32_X86"
+        cp -v "${supertux-milestone1-win32-x86}/$SUPERTUX_MILESTONE1_WIN32_X86" $out/milestone1/
+
+        SUPERTUX_MILESTONE1_WIN32_X64=$(basename ${supertux-milestone1-win32-x64}/*.zip)
+        echo "Milestone1 Win32 (64-bit): $SUPERTUX_MILESTONE1_WIN32_X64"
+        cp -v "${supertux-milestone1-win32-x64}/$SUPERTUX_MILESTONE1_WIN32_X64" $out/milestone1/
 
         # Origins — same pattern under origins/
         cp -rv ${supertux-origins-wasm} $out/origins/
@@ -57,6 +62,8 @@
         # --subst-var-by SUPERTUX_MILESTONE1_WIN32 "$SUPERTUX_MILESTONE1_WIN32"
         substituteInPlace $out/index.html \
           --subst-var-by SUPERTUX_MILESTONE1_APK "$SUPERTUX_MILESTONE1_APK" \
+          --subst-var-by SUPERTUX_MILESTONE1_WIN32_X86 "$SUPERTUX_MILESTONE1_WIN32_X86" \
+          --subst-var-by SUPERTUX_MILESTONE1_WIN32_X64 "$SUPERTUX_MILESTONE1_WIN32_X64" \
           --subst-var-by SUPERTUX_ORIGINS_APK "$SUPERTUX_ORIGINS_APK" \
           --subst-var-by SUPERTUX_ORIGINS_WIN32 "$SUPERTUX_ORIGINS_WIN32"
       '';
