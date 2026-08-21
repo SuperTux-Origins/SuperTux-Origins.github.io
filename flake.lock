@@ -842,11 +842,11 @@
         "xdgcpp": "xdgcpp"
       },
       "locked": {
-        "lastModified": 1787232961,
-        "narHash": "sha256-zGLNyp8SS8bBEF1Xqb7ffLafDHO57zXUaKqb7/IdK5I=",
+        "lastModified": 1787305921,
+        "narHash": "sha256-uyJfV2tHUEtbEaoCOK+aDMxTJ1k4rT94YvV+XW2evNA=",
         "owner": "SuperTux-Origins",
         "repo": "supertux",
-        "rev": "61ae4e7302b3cd88224f55f64598eeaba71da56f",
+        "rev": "d6920c95b2bc6b2e08be21621088c10ba0188f66",
         "type": "github"
       },
       "original": {
@@ -1009,18 +1009,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1786345348,
-        "narHash": "sha256-dpvTjt3Z8m9z6/KandNFY+QvREnEW+kEiL8YeW/IYGM=",
-        "owner": "grumbel",
-        "repo": "tinycmmc",
-        "rev": "50c49bf8a45f7c5ddb0c5f838a0fd6a00845a04d",
-        "type": "github"
+        "path": "./external/tinycmmc",
+        "type": "path"
       },
       "original": {
-        "owner": "grumbel",
-        "repo": "tinycmmc",
-        "type": "github"
-      }
+        "path": "./external/tinycmmc",
+        "type": "path"
+      },
+      "parent": [
+        "supertux-origins"
+      ]
     },
     "xdgcpp": {
       "inputs": {

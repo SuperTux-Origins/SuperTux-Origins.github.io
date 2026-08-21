@@ -14,9 +14,15 @@
 
       supertux-milestone1-wasm = supertux-milestone1.packages.${system}.supertux-milestone1-wasm;
       supertux-milestone1-android = supertux-milestone1.packages.${system}.supertux-milestone1-android;
+      # supertux-milestone1-win32 = supertux-milestone1.packages.${system}.supertux-milestone1-win32-zip;
 
       supertux-origins-wasm = supertux-origins.packages.${system}.supertux-origins-wasm;
       supertux-origins-android = supertux-origins.packages.${system}.supertux-origins-android;
+      supertux-origins-win32 = supertux-origins.packages.${system}.supertux-origins-win32-zip;
+
+        # SUPERTUX_MILESTONE1_WIN32=$(basename ${supertux-milestone1-win32}/*.zip)
+        # echo "Milestone1 Win32: $SUPERTUX_MILESTONE1_WIN32"
+        # cp -v "${supertux-milestone1-win32}/$SUPERTUX_MILESTONE1_WIN32" $out/milestone1/
 
       site = pkgs.runCommand "site" { } ''
         mkdir -p $out
@@ -25,6 +31,7 @@
         # Milestone 1
         cp -rv ${supertux-milestone1-wasm} $out/milestone1/
         chmod -R u+w $out/milestone1
+
         SUPERTUX_MILESTONE1_APK=$(basename ${supertux-milestone1-android}/*.apk)
         echo "Milestone1 APK: $SUPERTUX_MILESTONE1_APK"
         cp -v "${supertux-milestone1-android}/$SUPERTUX_MILESTONE1_APK" $out/milestone1/
@@ -38,13 +45,20 @@
             cp -v "$entry" $out/origins/supertux-origins.html
           fi
         fi
+
         SUPERTUX_ORIGINS_APK=$(basename ${supertux-origins-android}/*.apk)
         echo "Origins APK: $SUPERTUX_ORIGINS_APK"
         cp -v "${supertux-origins-android}/$SUPERTUX_ORIGINS_APK" $out/origins/
 
+        SUPERTUX_ORIGINS_WIN32=$(basename ${supertux-origins-win32}/*.zip)
+        echo "Origins Win32: $SUPERTUX_ORIGINS_WIN32"
+        cp -v "${supertux-origins-win32}/$SUPERTUX_ORIGINS_WIN32" $out/origins/
+
+        # --subst-var-by SUPERTUX_MILESTONE1_WIN32 "$SUPERTUX_MILESTONE1_WIN32"
         substituteInPlace $out/index.html \
           --subst-var-by SUPERTUX_MILESTONE1_APK "$SUPERTUX_MILESTONE1_APK" \
-          --subst-var-by SUPERTUX_ORIGINS_APK "$SUPERTUX_ORIGINS_APK"
+          --subst-var-by SUPERTUX_ORIGINS_APK "$SUPERTUX_ORIGINS_APK" \
+          --subst-var-by SUPERTUX_ORIGINS_WIN32 "$SUPERTUX_ORIGINS_WIN32"
       '';
 
       serveApp = {
